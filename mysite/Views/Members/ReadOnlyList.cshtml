@@ -1,0 +1,166 @@
+﻿@model IEnumerable<Member>
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    
+    /*--[Card-me]--*/
+    #cardin {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 0 rgba(83, 82, 82,0.1);
+        margin-bottom: 30px;
+        padding: 50px 0;
+        text-align: center;
+        background: #fff;
+    }
+
+        #cardin .circle {
+            border: 5px solid #f3f3f5;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #e7e8ec inset;
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+            #cardin .circle img {
+                display: table;
+                height: 74px;
+                margin: 16px auto;
+                width: 74px;
+            }
+
+    .head {
+        padding: 50px 20px;
+        background-color: rgb(95, 18, 18);
+    }
+
+        .head h1 {
+            transform: uppercase;
+            font-size: 36px;
+            color: #ffffff !important;
+            line-height: 1.4 !important;
+        }
+
+    .head {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+        letter-spacing: 0.02rem !important;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400 !important;
+        color: #ffffff !important;
+    }
+    .card:hover img {
+        transform: scale(1.2, 1.2);
+        transition-duration: 500ms;
+        transition-timing-function: ease-out;
+        opacity: 0.7;
+    }
+
+    .card img {
+        transform: scale(1.0, 1.0);
+        transition-duration: 500ms;
+        transition-timing-function: ease-out;
+    }
+
+    .card-img-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .member-icons {
+        position: absolute;
+        bottom: -30%;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        opacity: 0;
+    }
+
+    .card-img-wrapper:hover .member-icons {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .animate {
+        transition: all 0.3s ease-in-out;
+    }
+    section.about-area h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #ff9800;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    section.about-area p {
+        text-align: center;
+        font-weight: bold;
+        color: #ff9800;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+</style>
+
+<!--  ======================== About Me Area ==============================  -->
+<section class="about-area mt-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <div class="about-title">
+                    <h1 class="text-uppercase title-h1">Meet The Team</h1>
+                    <hr />
+                    <p class="para text-center">
+                        The leader in website design
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container mt-5">
+    <div id="members" class="row">
+        @foreach (var member in Model)
+        {
+        var image_path = $"/Image/{member.Photo}";
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card mb-4">
+                <div class="card-img-wrapper">
+                    <img style="width:100%" class="img-thumbnail" src="@image_path" alt="@member.KnownAs"/>
+                    <ul class="list-inline member-icons animate text-center">
+                        <li class="list-inline-item">
+                            <a class="btn btn-primary btn-sm" href="Members/details/@member.Id">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="card-body p-1">
+                    <h6 class="card-title text-center mb-1">
+                        <i class="fa fa-user"></i>
+                        KnownAs: @member.KnownAs, 
+                        LastActive: @member.LastActive
+                    </h6>
+                    <p class="card-text text-muted text-center">From: @member.City</p>
+                </div>
+            </div>
+        </div>
+   
+        }
+           
+        </div>
+</div>
+
+@section scripts{
+   <script></script>
+
+}

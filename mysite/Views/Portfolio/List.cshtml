@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex" id="wrapper">
+
+    <partial name="_AdminNavbar" />
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            <a class="btn btn-warning float-right" asp-controller="Portfolio" asp-action="Edit">Add-Portfolio</a>
+        </nav>
+        <div class="container-fluid">
+            <div class="text-center mt-3">
+                <h2>Portfolio</h2>
+                <hr />
+            </div>
+            <div class="table-responsive">
+                <table id="myTable" class="table table-stripped table-hover">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Detail</th>
+                            <th>Language</th>
+                            <th>Link</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var port in Model)
+                        {
+                        <tr>
+                            <td>@port.Id</td>
+                            <td>@port.Name</td>
+                            <td>@port.Type</td>
+                            <td>@port.Details</td>
+                            <td>@port.Language</td>
+                            <td>@port.Link</td>
+                            <td>
+                                <a class="btn btn-info" asp-controller="Portfolio" asp-action="Edit" asp-route-id="@port.Id">
+                                    Edit
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" asp-controller="Portfolio" asp-action="Remove" asp-route-id="@port.Id">
+                                    Remove
+                                </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+        @section scripts {
+            <script>
+                $(document).ready(function () {
+                    $('#myTable').DataTable();
+                });
+
+            </script>
+
+        }
+
+
+
+
