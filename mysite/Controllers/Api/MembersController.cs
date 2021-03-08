@@ -23,9 +23,8 @@ namespace mysite.Controllers.Api
         {
             _repo = repo;
         }
-
-
         //GET: api/Members
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<Member> GetMembers()
         {

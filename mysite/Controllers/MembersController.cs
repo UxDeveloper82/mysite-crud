@@ -28,11 +28,9 @@ namespace mysite.Areas.Member.Controllers
             _fileManager = fileManager;
         }
 
-        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
-            var members = _repo.GetAllMembers();
-            return View("Index");
+            return View();
         }
 
         public IActionResult Details(int id)

@@ -37,24 +37,24 @@
                     <tbody>
                         @foreach (var port in Model)
                         {
-                        <tr>
-                            <td>@port.Id</td>
-                            <td>@port.Name</td>
-                            <td>@port.Type</td>
-                            <td>@port.Details</td>
-                            <td>@port.Language</td>
-                            <td>@port.Link</td>
-                            <td>
-                                <a class="btn btn-info" asp-controller="Portfolio" asp-action="Edit" asp-route-id="@port.Id">
-                                    Edit
-                                </a>
-                            </td>
-                            <td>
-                                <a class="btn btn-danger" asp-controller="Portfolio" asp-action="Remove" asp-route-id="@port.Id">
-                                    Remove
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>@port.Id</td>
+                                <td>@port.Name</td>
+                                <td>@port.Type</td>
+                                <td>@port.Details</td>
+                                <td>@port.Language</td>
+                                <td>@port.Link</td>
+                                <td>
+                                    <a class="btn btn-info" asp-controller="Portfolio" asp-action="Edit" asp-route-id="@port.Id">
+                                        Edit
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" asp-controller="Portfolio" asp-action="Remove" asp-route-id="@port.Id">
+                                        Remove
+                                    </a>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>
@@ -62,15 +62,16 @@
         </div>
     </div>
 </div>
-        @section scripts {
-            <script>
-                $(document).ready(function () {
-                    $('#myTable').DataTable();
-                });
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
 
-            </script>
+    </script>
+    <script src="~/lib/js/menutoggle.js"></script>
 
-        }
+}
 
 
 

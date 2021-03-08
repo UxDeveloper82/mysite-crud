@@ -1,22 +1,12 @@
-﻿$(document).ready(function () {
-    // sticky navigation menu
-    let nav_offset_top = $('.navbar').height() + 50;
-    console.log(nav_offset_top);
-    function navbarFixed() {
-        if ($('.navbar').length) {
-            $(window).scroll(function () {
-                let scroll = $(window).scrollTop();
-                if (scroll >= nav_offset_top) {
-                    $('.navbar').addClass('navbar_fixed');
-                } else {
-                    $('.navbar').removeClass('navbar_fixed');
-                }
-            })
-        }
-    }
+﻿//Sticky navigation
+//Get Values
+const services = document.querySelector('#services');
+const initialCoords = services.getBoundingClientRect();
+const nav = document.querySelector('.navbar');
 
-    navbarFixed();
-
-
-
-})
+window.addEventListener('scroll', function () {
+    if (window.scrollY > initialCoords.top)
+        nav.classList.add('sticky');
+    else
+        nav.classList.remove('sticky');
+});

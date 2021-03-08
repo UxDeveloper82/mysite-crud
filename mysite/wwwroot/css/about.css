@@ -1,39 +1,103 @@
-﻿
-/*--[Card-me]--*/
-#cardin {
-    width: 100%;
-    max-width: 330px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px 0 rgba(83, 82, 82,0.1);
-    margin-bottom: 30px;
-    padding: 50px 0;
-    text-align: center;
-    background: #fff;
-}
+﻿/*Head Area*/
 
-    #cardin .circle {
-        border: 5px solid #f3f3f5;
-        border-radius: 50%;
-        box-shadow: 0 0 0 2px #e7e8ec inset;
-        width: 120px;
-        height: 120px;
-        display: inline-block;
-        color: #27ae60;
-        margin-bottom: 10px;
-    }
-
-        #cardin .circle img {
-            display: table;
-            height: 74px;
-            margin: 16px auto;
-            width: 74px;
-        }
-
+  
 body {
     margin: 0;
     padding: 0;
 }
 
+.head {
+    padding: 50px;
+    background-image: url('./../../images/bg/abousUs-bg.jpg');
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+    .head h3 {
+        text-align: center;
+        font-weight: bold;
+        color: #ff9800;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+        .head h3::after {
+            content: '';
+            display: block;
+            background: #ff9800;
+            height: 3px;
+            width: 170px;
+            margin: 20px auto 5px;
+        }
+
+.heading-title {
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+    .heading-title h3 {
+        position: relative;
+        display: inline;
+        padding: 12px 20px;
+        font-size: 28px;
+        line-height: 32px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: 2px solid #898ba2;
+    }
+
+        .heading-title h3::before {
+            background: #fff;
+        }
+
+        .heading-title h3::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-top: -16px;
+            margin-left: -15px;
+            background: #f4f4f4;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            border-radius: 100%;
+        }
+
+        .heading-title h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin-top: -7px;
+            margin-left: -6px;
+            background: #898ba2;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            border-radius: 100%;
+        }
+
+#myteam h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #ff9800;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+/*Card*/
 .frontside .card .card-body img {
     width: 120px;
     height: 120px;
@@ -59,168 +123,498 @@ body {
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-
-/* -- [Tools] --*/
-.site-main .card-body .card p {
-    background: #ffffff;
+/* Banner Area */
+.site-banner {
+    padding: 50px;
+    background-image: url('./../../images/bg/about-bg.png');
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
-.frontside {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 30px;
-}
-
-    .frontside .card {
-        background: white;
-        min-height: 312px;
+    .site-banner h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #ff9800;
+        padding-bottom: 10px;
+        text-transform: uppercase;
     }
 
-        .frontside .card a {
-            font-size: 18px;
-            color: #007bff !important;
+        .site-banner h1::after {
+            content: '';
+            display: block;
+            background: #ff9800;
+            height: 3px;
+            width: 170px;
+            margin: 20px auto 5px;
         }
 
-        .frontside .card p {
-            font-size: 18px;
-            color: #007bff !important;
-        }
+    .site-banner .site-title h1 {
+        text-shadow: 2px 2px gray;
+        color: white;
+        font-size: 2rem;
+    }
 
-        .frontside .card .card-title,
-        .backside .card .card-title {
-            color: #007bff !important;
-        }
+    .site-banner .site-title h2 {
+        text-shadow: 2px 2px gray;
+        font-weight: bold;
+        color: white;
+        font-size: 1.8rem;
+    }
 
-        .frontside .card .card-text,
-        .backside .card .card-title {
-            color: #007bff !important;
-        }
+    .site-banner .site-title p {
+        color: white;
+        text-shadow: 2px 2px gray;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+/* End Banner Area */
 
-        .frontside .card .card-body img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-        }
-
-.about-area .frontside,
-.about-area .backside {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
+.tabs {
+    width: 90%;
+    height: auto;
     margin: 0 auto;
 }
 
-.flip-card {
-    background-color: transparent;
-    width: 160px;
-    height: 160px;
-    perspective: 1000px;
+    /* tab list item */
+    .tabs .tabs-list {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .tabs .tabs-list li {
+            width: 100px;
+            float: left;
+            margin: 0px;
+            margin-right: 2px;
+            padding: 10px 5px;
+            text-align: center;
+            background-color: cornflowerblue;
+            border-radius: 3px;
+        }
+
+            .tabs .tabs-list li:hover {
+                cursor: pointer;
+            }
+
+            .tabs .tabs-list li a {
+                text-decoration: none;
+                color: white;
+            }
+
+    /* Tab content section */
+    .tabs .tab {
+        display: none;
+        width: 96%;
+        min-height: 250px;
+        height: auto;
+        border-radius: 3px;
+        padding: 20px 15px;
+        background-color: lavender;
+        color: darkslategray;
+        clear: both;
+    }
+
+        .tabs .tab h3 {
+            border-bottom: 3px solid cornflowerblue;
+            letter-spacing: 1px;
+            font-weight: normal;
+            padding: 5px;
+        }
+
+        .tabs .tab p {
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+
+/* When active state */
+.active {
+    display: block !important;
 }
 
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 50%;
+.tabs .tabs-list li.active {
+    background-color: lavender !important;
+    color: black !important;
+}
+
+.active a {
+    color: black !important;
+}
+
+section.head h3 {
     text-align: center;
-    transition: transform 1.2s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    font-weight: bold;
+    color: #ff9800;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: #bbb;
+section.head p {
     color: black;
 }
 
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+.card:hover img {
+    transform: scale(1.2, 1.2);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    opacity: 0.7;
 }
 
-
-/*--[Accordion-area]--*/
-
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
+.card img {
+    transform: scale(1.0, 1.0);
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
 }
 
-    button.accordion.active, button.accordion:hover {
-        background-color: #ddd;
-    }
-
-.accordion .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-}
-
-/*--[tools-Area]--*/
-#tools {
-    padding: 100px 0;
-}
-
-    #tools p {
-        font-size: 20px;
-        color: #000;
-        padding: 20px 0;
-    }
-
-    #tools .box {
-        padding: 50px 0;
-    }
-
-.outside-container {
+.card-img-wrapper {
+    overflow: hidden;
     position: relative;
 }
 
-.overlay {
+.member-icons {
     position: absolute;
-    bottom: 0;
-    top: 0;
+    bottom: -30%;
     left: 0;
     right: 0;
-    background-color: #008CBA;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: 0.5s ease;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
 }
 
-.outside-container:hover .overlay {
-    height: 100%;
+.card-img-wrapper:hover .member-icons {
+    bottom: 0;
+    opacity: 1;
 }
 
-.text {
-    text-align: center;
-    white-space: nowrap;
-    color: white;
-    overflow: hidden;
-    font-size: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.animate {
+    transition: all 0.3s ease-in-out;
 }
+
+/* OPERATIONS */
+.operations {
+    max-width: 100rem;
+    margin: 12rem auto 0 auto;
+    background-color: #fff;
+}
+
+.operations__tab-container {
+    display: flex;
+    justify-content: center;
+}
+
+.operations__tab {
+    margin-right: 2.5rem;
+    transform: translateY(-50%);
+}
+
+    .operations__tab span {
+        margin-right: 1rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+  
+  
+
+.operations__content {
+    display: none;
+    /* JUST PRESENTATIONAL */
+    font-size: 1.7rem;
+    padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.operations__tab--1 {
+    background-color: var(--color-secondary);
+}
+
+    .operations__tab--1:hover {
+        background-color: var(--color-secondary-darker);
+    }
+
+.operations__tab--3 {
+    background-color: var(--color-tertiary);
+    margin: 0;
+}
+
+    .operations__tab--3:hover {
+        background-color: var(--color-tertiary-darker);
+    }
+
+
+.operations__content {
+    display: none;
+    /* JUST PRESENTATIONAL */
+    font-size: 1.7rem;
+}
+
+.operations__content--active {
+    display: grid;
+  
+  
+}
+
+.operations__header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.operations__content p {
+    display: flex;
+
+}
+
+
+
+@media (max-width: 330px) {
+
+    /* OPERATIONS */
+    .operations {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .operations__content--active {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+    }
+
+    .operations__header {
+        font-size: 10px;
+        font-weight: 200;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .operations__tab-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction
+    }
+   
+}
+
+    /*--[Card-me]--*/
+    #cardin {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 0 rgba(83, 82, 82,0.1);
+        margin-bottom: 30px;
+        padding: 50px 0;
+        text-align: center;
+        background: #fff;
+    }
+
+        #cardin .circle {
+            border: 5px solid #f3f3f5;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #e7e8ec inset;
+            width: 120px;
+            height: 120px;
+            display: inline-block;
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+            #cardin .circle img {
+                display: table;
+                height: 74px;
+                margin: 16px auto;
+                width: 74px;
+            }
+
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    .site-main .about-area .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .site-main .section-title {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    /* -- [Tools] --*/
+    .site-main .card-body .card p {
+        background: #ffffff;
+    }
+
+    .frontside {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+        .frontside .card {
+            background: white;
+            min-height: 312px;
+        }
+
+            .frontside .card a {
+                font-size: 18px;
+                color: #007bff !important;
+            }
+
+            .frontside .card p {
+                font-size: 18px;
+                color: #007bff !important;
+            }
+
+            .frontside .card .card-title,
+            .backside .card .card-title {
+                color: #007bff !important;
+            }
+
+            .frontside .card .card-text,
+            .backside .card .card-title {
+                color: #007bff !important;
+            }
+
+            .frontside .card .card-body img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+
+    .about-area .frontside,
+    .about-area .backside {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 160px;
+        height: 160px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        transition: transform 1.2s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+
+    /*--[Accordion-area]--*/
+
+    button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd;
+        }
+
+    .accordion .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+    }
+
+    /*--[tools-Area]--*/
+    #tools {
+        padding: 100px 0;
+    }
+
+        #tools p {
+            font-size: 20px;
+            color: #000;
+            padding: 20px 0;
+        }
+
+        #tools .box {
+            padding: 50px 0;
+        }
+
+    .outside-container {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .outside-container:hover .overlay {
+        height: 100%;
+    }
+
+    .text {
+        text-align: center;
+        white-space: nowrap;
+        color: white;
+        overflow: hidden;
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }

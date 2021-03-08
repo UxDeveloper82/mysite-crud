@@ -82,8 +82,8 @@
 
 ];
 let card = document.getElementById("card");
-for (var i = 0; i < repairs.length; i++) {
-    var repair = repairs[i];
+for (let i = 0; i < repairs.length; i++) {
+    let repair = repairs[i];
     card.innerHTML += `
                                <div class="col-md-3 col-sm-6 col-xs-12">
                                              <div class="core-features">
@@ -98,14 +98,11 @@ for (var i = 0; i < repairs.length; i++) {
                                                         <p style="display:none;">${repair.description}</p>
                                                     </div>
                                               </div>
-                                          </div>
-
-
-                    `
+                                          </div>`
 };
-var more = document.getElementsByClassName("more")
-for (var i = 0; i < more.length; i++) {
-    more[i].onclick = function () {
+let more = document.getElementsByClassName("more")
+for (let i = 0; i < more.length; i++) {
+    more[i].addEventListener('click', function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === 'block') {
@@ -113,7 +110,7 @@ for (var i = 0; i < more.length; i++) {
         } else {
             panel.style.display = 'block';
         }
-    }
+    });
 }
 
 

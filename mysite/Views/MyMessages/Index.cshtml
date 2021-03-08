@@ -27,7 +27,7 @@
     </div>
 </div>
 @section scripts
-{ 
+{
     <script>
         $(document).ready(function () {
             var mymessages = $("#mymessages").DataTable({
@@ -36,7 +36,7 @@
                     dataSrc: ""
                 },
                 columns: [
-                    { data: "id"},
+                    { data: "id" },
                     { data: "name" },
                     { data: "email" },
                     { data: "message" },
@@ -63,7 +63,8 @@
                     }
                 });
             });
-        });     
+        });
     </script>
+    <script src="~/lib/js/menutoggle.js"></script>
 }
 

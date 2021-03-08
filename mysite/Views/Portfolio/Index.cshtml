@@ -3,6 +3,85 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .filter-btn {
+        background: transparent;
+        border-color: var(--clr-gold);
+        font-size: 1rem;
+        text-transform: capitalize;
+        margin: 0 0.5rem;
+        letter-spacing: 1px;
+        border-radius: var(--radius);
+        padding: 0.375rem 0.75rem;
+        color: var(--clr-gold);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+        .filter-btn:hover {
+            background: var(--clr-gold);
+            color: var(--clr-white);
+        }
+    .btn-container {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    #searchBar {
+        width: 100%;
+        height: 32px;
+        border-radius: 3px;
+        border: 1px solid #eaeaea;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    #searchWrapper {
+        position: relative;
+    }
+
+        #searchWrapper::after {
+            content: '🔍';
+            position: absolute;
+            top: 7px;
+            right: 15px;
+        }
+
+
+    .pagenumbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .pagenumbers button {
+            width: 50px;
+            height: 50px;
+            appearance: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #44AAEE;
+            margin: 5px;
+            transition: 0.4s;
+            color: #FFF;
+            font-size: 18px;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        }
+
+            .pagenumbers button:hover {
+                background-color: #44EEAA;
+            }
+
+            .pagenumbers button.active {
+                background-color: #44EEAA;
+                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+            }
+</style>
+
 
 <link href="~/css/portfolio.css" rel="stylesheet" />
 
@@ -12,78 +91,57 @@
         <section class="project-area">
             <div class="container">
                         <div class="row">
-                                <div class="col-lg-12">
-                                        <div class="project-title pb-5">
-                                            <h1 class="text-uppercase title-h1">Recently Done Project</h1>
-                                            <h1 class="text-uppercase title-h1">Quality Work</h1>
-                                            <hr />
-                                        </div>
-                                        <ul class="filters text-center">
-                                            <li class="active" data-filter="*"><a href="#!">All</a></li>
-                                            <li data-filter=".Angular"><a href="#!">AngularApp</a></li>
-                                            <li data-filter=".Javascript"><a href="#!">Js templates</a></li>
-                                            <li data-filter=".Core"><a href="#!">Asp.net Core</a></li>
-                                            <li data-filter=".Data"><a href="#!">Data-tables</a></li>
-                                            <li data-filter=".Templates"><a href="#!">Templates</a></li>
-                                        </ul>
-                                 </div>
+                            <div class="col-lg-12">
+                                <div class="project-title pb-5">
+                                    <h1 class="text-uppercase title-h1">Recently Done Project</h1>
+                                    <h1 class="text-uppercase title-h1">Quality Work</h1>
+                                    <div id="searchWrapper">
+                                        <input type="text"
+                                               name="searchBar"
+                                               id="searchBar"
+                                               placeholder="search for a Project" />
+                                    </div>
+                                    <hr />
+                                </div>
+                                <!-- filter buttons -->
+                                <div class="btn-container">
+                                    <div class="row grid justify-content-center">
+                                        <button type="button" class="filter-btn" data-id="all">all</button>
+                                        <button type="button" class="filter-btn" data-id="Angular">
+                                            AngularApp
+                                        </button>
+                                        <button type="button" class="filter-btn" data-id="Javascript">
+                                            Js Templates
+                                        </button>
+                                        <button type="button" class="filter-btn" data-id="Core">
+                                            Asp.net Core
+                                        </button>
+                                        <button type="button" class="filter-btn" data-id="Data">
+                                            Data-tables
+                                        </button>
+                                        <button type="button" class="filter-btn" data-id="Templates">
+                                            Templates
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">  
                             <div class="col-lg-12">
                                 <div class="projects">
                                     <div id="card" class="row grid justify-content-center">
-                                        @foreach (var port in Model.Portfolios)
-                                            {
-                                                var image_path = $"/PortfolioPhoto/{port.PortfolioPhoto}";
-
-                                        <div class="col-lg-4 item @port.Type">
-                                            <div class="card">
-                                                <div class="card-head">
-                                                    <img src="@image_path" alt="" class="img-fluid card-img">
-                                                    <div class="card-overlay"><h2>@port.Name</h2></div>
-                                                    <div class="card-hover">
-                                                        <h2>Language: @port.Language</h2>
-                                                        <p>Details: @port.Details</p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card-body text-center">
-                                                    <h4 class="title">@port.Name</h4>
-                                                    <a href="@port.Link" class="btn btn-lg card-btn">Goto Page</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            }
                                     </div>
+
                                 </div>
-                            </div>
                          </div>
                      
                         <div class="row">
                             <div class="col-lg-12 pages">
-                                <!-- Pagination -->
-                                @if (Model.PageNumber > 1)
-                                {
-                                <a class="btn btn-info" asp-action="Index" asp-controller="Portfolio" asp-route-category="@Model.Category"
-                                   asp-route-pageNumber="@(Model.PageNumber - 1)">&#11164</a>
-                                }
-                                @for (int i = 1; i <= Model.PageCount; i++)
-                                {
-                                    string activeClass = i == Model.PageNumber ? "active" : "";
-
-                                <a class="@activeClass btn btn-info" asp-action="Index" asp-controller="Portfolio" asp-route-category="@Model.Category"
-                                   asp-route-pageNumber="@i">@i</a>
-                                }
-                                @if (Model.NextPage)
-                                {
-
-                                <a class="btn btn-info" asp-action="Index" asp-controller="Portfolio" asp-route-category="@Model.Category"
-                                   asp-route-pageNumber="@(Model.PageNumber + 1)">&#11166</a>
-                                }
-
+                                <div class="pagenumbers" id="pagination"></div>
                             </div>
                         </div>
                     </div>
+                </div>
         </section>
         <!--  ======================= End Project Area =============================  -->
     </main>

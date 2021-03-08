@@ -1,4 +1,6 @@
-﻿:root {
+﻿
+/* Global css*/
+:root {
     --color-primary: #5ec576;
     --color-secondary: #ffcb03;
     --color-tertiary: #ff585f;
@@ -12,13 +14,26 @@
     --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 
+/* CSS Variables */
+
+/*:root {
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #141313;
+    --text-color: #777777;
+    --border-color: #201f1f17;
+    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);*/
+    /* font family variables. */
+/*}*/ 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
 
-/* Global css*/
 html, body {
     margin: 0%;
     box-sizing: border-box;
@@ -39,20 +54,6 @@ html, body {
 .bg-gray {
     background: #212121;
 }
-
-/* CSS Variables */
-
-:root {
-    --primary-color: #4458dc;
-    --primary-color2: #854fee;
-    --title-color: #141313;
-    --text-color: #777777;
-    --border-color: #201f1f17;
-    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
-    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-    /* font family variables. */
-} 
 
 .text-uppercase {
     text-transform: uppercase;
@@ -124,18 +125,16 @@ button:hover
     box-shadow: none !important;
 }
 
-/*Navbar css*/
-.navbar_fixed {
+/* nav and stickly class at the same time */
+.navbar.sticky {
     position: fixed;
+    top: 0;
+    z-index: 100;
     width: 100%;
-    top: -1px;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    box-shadow: var(--box-shadow);
-    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.95);
     transition: background 1s ease;
 }
+
 /* Banner Area */
 
 .site-banner {
@@ -640,5 +639,17 @@ button:hover
     .site-main .about-area {
         padding: 3% 4%;
     }
+}
+
+/* COOKIE MESSAGE */
+.cookie-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: white;
+    color: #bbb;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
