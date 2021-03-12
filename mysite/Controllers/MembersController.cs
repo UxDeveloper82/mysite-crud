@@ -28,15 +28,16 @@ namespace mysite.Areas.Member.Controllers
             _fileManager = fileManager;
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details()
         {
-            var member = _repo.GetMember(id);
-            return View(member);
+            
+            return View();
          
         }
 

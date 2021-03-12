@@ -5,15 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+
+    /* Set width on the form input elements since they're 100% wide by default */
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .field-validation-valid {
+        color: red;
+    }
+
+    .input-validation-error {
+        border: 2px solid red;
+    }
+</style>
 <form class="blogform-signin" asp-controller="Auth" asp-action="Login" method="post">
+   
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <div class="form-group">
         <label for="Username">Username</label>
-        <input class="form-control" asp-for="Username" required autofocus />
+        <input class="form-control" asp-for="Username" required/>
+        <span asp-validation-for="Username" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="Password">Password</label>
-        <input class="form-control" asp-for="Password" required />
+        <input class="form-control" asp-for="Password" required/>
+        <span asp-validation-for="Password" class="text-danger"></span>
     </div>
     <div class="checkbox mb-3">
         <label>
