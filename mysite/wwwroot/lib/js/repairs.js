@@ -1,4 +1,4 @@
-﻿var repairs = [
+﻿var items = [
     {
         "id": 1,
         "type": "Bootstrap 3.7",
@@ -81,36 +81,49 @@
     }
 
 ];
-let card = document.getElementById("card");
-for (let i = 0; i < repairs.length; i++) {
-    let repair = repairs[i];
-    card.innerHTML += `
-                               <div class="col-md-3 col-sm-6 col-xs-12">
-                                             <div class="core-features">
-                                                    <div class="circle">
-                                                        <img class="img-fluid" src="images/features/${repair.image}.png" alt="crib thumbnail">
-                                                    </div>
-                                                    <div style="height:230px" class="mb-3">
-                                                        <h3>${repair.type}</h3>
-                                                        <p>${repair.description}</p>
-                                                        <hr>
-                                                        <button id="more" class="btn btn-sm btn-primary more"> Details </button>
-                                                        <p style="display:none;">${repair.description}</p>
-                                                    </div>
-                                              </div>
-                                          </div>`
-};
-let more = document.getElementsByClassName("more")
-for (let i = 0; i < more.length; i++) {
-    more[i].addEventListener('click', function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === 'block') {
-            panel.style.display = 'none';
-        } else {
-            panel.style.display = 'block';
-        }
+
+//Declares items
+const displayCard = document.getElementById("card");
+const more = document.getElementsByClassName("more");
+
+// Windows Ready
+window.addEventListener("DOMContentLoaded", function () {
+    displayMenuItems(items);
+});
+
+
+function displayMenuItems(menuItems) {
+    let displayMenu = menuItems.map(function (item) {
+        return `<div class="col-md-3 col-sm-6 col-xs-12">
+                     <div class="core-features">
+                          <div class="circle">
+                               <img class="img-fluid" src="images/features/${item.image}.png" alt="crib thumbnail">
+                          </div>
+                          <div style="height:230px" class="mb-3">
+                               <h3>${item.type}</h3>
+                               <p>${item.description}</p>
+                               <hr>
+                               <button id="more" class="btn btn-sm btn-primary more"> Details </button>
+                               <p style="display:none;">${item.description}</p>
+                           </div>
+                      </div>
+                </div>`;
     });
+    displayMenu = displayMenu.join("");
+    displayCard.innerHTML = displayMenu;
+    for (let i = 0; i < more.length; i++) {
+        more[i].addEventListener('click', function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    }
 }
+
+
 
 
