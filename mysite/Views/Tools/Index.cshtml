@@ -4,7 +4,34 @@
     ViewData["Title"] = "Tools Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-  
+
+<!-- =========================== Thumbnail Gallery ========================================== -->
+<div id="header-container">
+    <section id="thumbgallery">
+        <div class="text-center">
+            <h2 class='font-weight-bold'>Lets get started with your next project</h2>
+            <h2 class="font-weight-bold">Better design</h2>
+            <p class="font-weight-bold">Better experiences.</p>
+            <a asp-area="" asp-controller="MyMessages" asp-action="New" class="btn btn-lg btn-rounded btn-primary">Send Message</a><br>
+        </div>
+        <div class="container">
+            <div class="main-img">
+                <img src="~/images/img/img1.jpeg" id="current" />
+            </div>
+            <div class="imgs">
+                <img src="~/images/img/img1.jpeg" />
+                <img src="~/images/img/img2.jpeg" />
+                <img src="~/images/img/img3.jpeg" />
+                <img src="~/images/img/img4.jpeg" />
+                <img src="~/images/img/img5.jpeg" />
+                <img src="~/images/img/img6.jpeg" />
+                <img src="~/images/img/img7.jpeg" />
+                <img src="~/images/img/img8.jpeg" />
+            </div>
+        </div>
+    </section>
+
+</div>
 <!-- Tools -->
 <section id="tools">
     <div class="container">
@@ -134,6 +161,7 @@
 </section>
 
 @section Scripts{
+    <script src="~/lib/js/gallery.js"></script>
     <script src="~/lib/js/websites.js"></script>
 }
 

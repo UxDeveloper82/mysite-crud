@@ -28,10 +28,11 @@ namespace mysite.Areas.Member.Controllers
             _fileManager = fileManager;
         }
 
-        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
-            return View();
+            if (User.IsInRole("Admin"))
+                return View("Index");
+            return View("ReadOnlyList");
         }
 
         public IActionResult Details()

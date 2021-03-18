@@ -5,127 +5,122 @@
 
 
 <!--  ====================== Start Services Area =============================  -->
-<!-- =========================== Thumbnail Gallery ========================================== -->
-<section id="thumbgallery">
-    <div class="text-center">
-        <h2 class='font-weight-bold'>Lets get started with your next project</h2>
-        <h2 class="font-weight-bold">Better design</h2>
-        <p class="font-weight-bold">Better experiences.</p>
-        <a asp-area="" asp-controller="MyMessages" asp-action="New" class="btn btn-lg btn-rounded btn-primary">Send Message</a><br>
-    </div>
-    <div class="container">
-        <div class="main-img">
-            <img src="~/images/img/img1.jpeg" id="current" />
+<!-- slider -->
+<section>
+    <div class="hero-slider">
+        <!-- slider item -->
+        <div class="hero-slider-item bg-cover hero-section" data-background="images/slider/banner-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
+                        <h4 class="mb-0 letter-spacing">We are here to</h4>
+                        <h1 class="mb-4">Planning Business</h1>
+                        <p class="mb-5">CUSTOM WEBSITE DESIGN - IMPRESS YOUR CUSTOMERS AND PARTNERS -  specialize in creating mobile-friendly user experiences that are optimized for Google search.</p>
+                        <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-primary-outline" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".4">more details</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="imgs">
-            <img src="~/images/img/img1.jpeg" />
-            <img src="~/images/img/img2.jpeg" />
-            <img src="~/images/img/img3.jpeg" />
-            <img src="~/images/img/img4.jpeg" />
-            <img src="~/images/img/img5.jpeg" />
-            <img src="~/images/img/img6.jpeg" />
-            <img src="~/images/img/img7.jpeg" />
-            <img src="~/images/img/img8.jpeg" />
+        <!-- slider item -->
+        <div class="hero-slider-item bg-cover hero-section" data-background="images/slider/banner-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">
+                        <h4 class="mb-0 letter-spacing">We are here to</h4>
+                        <h1 class="mb-4">Planning Business</h1>
+                        <p class="mb-5">Stand out from the competition with an online presence</p>
+                        <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-primary-outline" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".4">more details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider item -->
+        <div class="hero-slider-item bg-cover hero-section" data-background="images/slider/banner-3.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">
+                        <h4 class="mb-0 letter-spacing">We are here to</h4>
+                        <h1 class="mb-4">Planning Business</h1>
+                        <p class="mb-5">We specialize in creating high-quality websites that add value toward achieving your business goals.</p>
+                        <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-primary-outline" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".4">more details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider item -->
+        <div class="hero-slider-item bg-cover hero-section" data-background="images/slider/banner-4.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-duration-in=".3" data-animation-in="fadeInRight" data-delay-in=".1">
+                        <h4 class="mb-0 letter-spacing">We are here to</h4>
+                        <h1 class="mb-4">Planning Business</h1>
+                        <p class="mb-5">We are a company made up of caring friends who are as passionate about technology as we are about people.</p>
+                        <a asp-area="" asp-controller="Home" asp-action="About" class="btn btn-primary-outline" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".4">more details</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<div class="text-center cookie-message"></div>
-<section id="services" class="services-area">
+<!-- /slider -->
+<!-- banner feature -->
+<section class="translate-top">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center services-title">
-                <h1 class="text-uppercase title-text">Services I Offer</h1>
-                <p class="para">
-                    Start Today I can help you build better websites using the Bootstrap framework!
-                    I can start customizing, no strings attached!
-                </p>
-                <hr />
+            <!-- feature item -->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="bg-white py-5 px-4 text-center box-shadow transition hover-bg-dark active">
+                    <div class="icon-bg mb-4 water-wave">
+                        <i class="fa fa-diamond icon text-primary"></i>
+                    </div>
+                    <h4 class="mb-4">Business Solution</h4>
+                    <p>
+                        My themes updated regularly to
+                        keep them bug free!
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="container services-list">
-            <div class="row">
-                <div id="services" class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="services">
-                        <div class="sevices-img text-center py-4">
-                            <img src="~/images/services/s1.png" alt="Services-1" class="img-fluid" />
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase font-roboto">FullStack</h5>
-                            <p class="card-text text-secondary">
-                                My themes updated regularly to
-                                keep them bug free!
-                            </p>
-                        </div>
+            <!-- feature item -->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="bg-white py-5 px-4 text-center box-shadow transition hover-bg-dark">
+                    <div class="icon-bg mb-4 water-wave">
+                        <i class="fa fa-bar-chart icon text-primary"></i>
                     </div>
+                    <h4 class="mb-4">Market Research</h4>
+                    <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="services">
-                        <div class="sevices-img text-center py-4">
-                            <img src="~/images/services/s2.png" alt="Services-2" class="img-fluid" />
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase font-roboto">ux/ui desing</h5>
-                            <p class="card-text text-secondary">
-                                All dependencies are kept current to
-                                keep things fresh.
-                            </p>
-                        </div>
+            </div>
+            <!-- feature item -->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="bg-white py-5 px-4 text-center box-shadow transition hover-bg-dark">
+                    <div class="icon-bg mb-4 water-wave">
+                        <i class="fa fa-lightbulb-o icon text-primary"></i>
                     </div>
+                    <h4 class="mb-4">Business Strategy</h4>
+                    <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="services">
-                        <div class="sevices-img text-center py-4">
-                            <img src="~/images/services/s3.png" alt="Services-3" class="img-fluid" />
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase font-roboto">webApp design</h5>
-                            <p class="card-text text-secondary">
-                                You can use my design as is, or you can make changes!
-                            </p>
-                        </div>
+            </div>
+            <!-- feature item -->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="bg-white py-5 px-4 text-center box-shadow transition hover-bg-dark">
+                    <div class="icon-bg mb-4 water-wave">
+                        <i class="fa fa-dashboard icon text-primary"></i>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="services">
-                        <div class="sevices-img text-center py-4">
-                            <img src="~/images/services/s4.png" alt="Services-4" class="img-fluid" />
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-uppercase font-roboto">seo</h5>
-                            <p class="card-text text-secondary">
-                                I can increase the quality and quantity of website traffic
-                            </p>
-                        </div>
-                    </div>
+                    <h4 class="mb-4">Speed Optimization</h4>
+                    <p>Lorem ipsum dolor sit amet constur adipelit sed.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<section id="card-area">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="page-header">
-                    <h2>Template <small>Core Features</small></h2>
-                    <hr />
-                </div>
-            </div>
-        </div>
-        <div id="card" class="row"></div>
-    </div>
-</section>
+<!-- /banner feature -->
 <!--  ======================== Testimonials About Me Area ==============================  -->
-<section class="testimonials bg-info">
+<section class="testimonials">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
                 <div class="about-title">
                     <h1>Our Partners</h1>
-                    <p class="para text-center">
-                        Subscribe easy tutorials channel to wacth more videos
-                    </p>
                 </div>
             </div>
         </div>
@@ -187,7 +182,208 @@
         </div>
     </div>
 </section>
+<div class="text-center cookie-message"></div>
+<section class="elementor elementor-standard pt50 pb20 mt-5 elementor-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center services-title">
+                <div class="about-title">
+                    <h1 class="text-uppercase title-text">WebSite Services I Offer</h1>
+                </div>
+                <p class="para">
+                    Start Today I can help you build better websites using the Bootstrap framework!
+                    I can start customizing, no strings attached!
+                </p>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb40">
+                <h1>What i can do for you?</h1>
+                <p class="text-black-50">
+                    It takes years and multiple projects to understand the process of creating
+                    and establishing a business. Your website is the first door that your future
+                    clients will step through. Find out how we can help make that a great experience.
+                </p>
+                <a asp-area="" asp-controller="MyMessages" asp-action="New" class="btn btn-lg btn-rounded btn-primary">Send Message</a><br>
+            </div>
+            <div class="col-lg-4 col-md-6 mb40">
+                <ul class="list-unstyled latest-news">
+                    <li class="media">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">Marketing</h4>
+                            <h5 class="mt-0 mb-1">Marketing through content can be powerful and highly effective if done right. Keyword density and relations...</h5>
+                        </div>
+                    </li>
+                    <li class="media my-3">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">Social Media</h4>
+                            <h5 class="mt-0 mb-1">Need help starting and maintaining a Social Media campaign? Start focusing on a dedicated customer fan base.</h5>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-hand-paper-o"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">Marketing</h4>
+                            <h5 class="mt-0 mb-1">Need a writer to create unique content for your website, book report, or marketing content? Look no further!</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb40">
+                <ul class="list-unstyled latest-news">
+                    <li class="media">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">SEO Power</h4>
+                            <h5 class="mt-0 mb-1">Get more website traffic, customers, and more online visibility with our powerful SEO services.</h5>
+                        </div>
+                    </li>
+                    <li class="media my-3">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-code"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">WebApp Development</h4>
+                            <h5 class="mt-0 mb-1">Your website has to impress your visitors within just a few seconds. Let us build you a captivating website.</h5>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <div class="service-container">
+                            <div class="service-icon">
+                                <i class="fa fa-cloud"></i>
+                            </div>
+                        </div>
+                        <div class="media-body m-2">
+                            <h4 class="card-title text-uppercase font-roboto">Amazing Websites</h4>
+                            <h5 class="mt-0 mb-1">Local businesses in Polk county such as Davenport you can find the best bang for their buck here.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="banner">
+    <div class="container">
+        <div class="row grid justify-content-center">
+            <div class="col-lg-12 text-center">
+                <div class="about-title">
+                    <h1>Take Your Website To The Next Level!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--  ======================== End About Me Area ==============================  -->
+@*<section id="services" class="services-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center services-title">
+                    <div class="about-title">
+                        <h1 class="text-uppercase title-text">WebSite Services I Offer</h1>
+                    </div>
+                    <p class="para">
+                        Start Today I can help you build better websites using the Bootstrap framework!
+                        I can start customizing, no strings attached!
+                    </p>
+                    <hr />
+                </div>
+            </div>
+            <div class="container services-list">
+                <div class="row">
+                    <div id="services" class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="~/images/services/s1.png" alt="Services-1" class="img-fluid" />
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">FullStack</h5>
+                                <p class="card-text text-secondary">
+                                    My themes updated regularly to
+                                    keep them bug free!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="~/images/services/s2.png" alt="Services-2" class="img-fluid" />
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">ux/ui desing</h5>
+                                <p class="card-text text-secondary">
+                                    All dependencies are kept current to
+                                    keep things fresh.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="~/images/services/s3.png" alt="Services-3" class="img-fluid" />
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">webApp design</h5>
+                                <p class="card-text text-secondary">
+                                    You can use my design as is, or you can make changes!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="services">
+                            <div class="sevices-img text-center py-4">
+                                <img src="~/images/services/s4.png" alt="Services-4" class="img-fluid" />
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-uppercase font-roboto">seo</h5>
+                                <p class="card-text text-secondary">
+                                    I can increase the quality and quantity of website traffic
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+@*<section id="card-area">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Template <small>Core Features</small></h2>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <div id="card" class="row"></div>
+        </div>
+    </section>*@
+
 <!--  ========================== Subscribe me Area ============================  -->
 @*<div class="bg-faded pt90 pb90">
         <div class="container">
@@ -214,8 +410,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="my-4">
+                <div class="about-title">
+                    <h1 class="text-uppercase title-text">Let's Get In Touch!</h1>
+                    <hr class="my-4">
+                </div>
                 <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
             </div>
         </div>
@@ -252,7 +450,6 @@
 @section Scripts {
     <script src="~/lib/js/owl.js"></script>
     <script src="~/lib/js/repairs.js"></script>
-    <script src="~/lib/js/gallery.js"></script>
     <script src="~/lib/js/parallaxbg.js"></script>
     <script src="~/lib/js/stickynav.js"></script>
     <script src="~/lib/js/cookiemessage.js"></script>

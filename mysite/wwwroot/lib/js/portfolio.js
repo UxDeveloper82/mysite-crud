@@ -41,7 +41,7 @@ loadPorts();
 const displayMenuItems = (portfolios) => {
     const htmlString = portfolios.map((portfolios) => {
         return ` 
-               <div class="col-lg-3 item ${portfolios.type}">
+               <div class="col-lg-4 item ${portfolios.type}">
                             <div class="card">
                                 <div class="card-head">
                                     <img src="/Image/${portfolios.portfolioPhoto}" alt="" class="img-fluid card-img">
