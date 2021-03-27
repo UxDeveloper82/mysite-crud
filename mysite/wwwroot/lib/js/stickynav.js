@@ -1,6 +1,6 @@
 ﻿//Sticky navigation
 //Get Values
-const services = document.querySelector('.testimonials');
+const services = document.querySelector('.partners');
 const initialCoords = services.getBoundingClientRect();
 const nav = document.querySelector('.navbar');
 

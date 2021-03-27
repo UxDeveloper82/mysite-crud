@@ -5,23 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-
-    /* Set width on the form input elements since they're 100% wide by default */
-    input,
-    select,
-    textarea {
-        max-width: 280px;
-    }
-
-    .field-validation-valid {
-        color: red;
-    }
-
-    .input-validation-error {
-        border: 2px solid red;
-    }
-</style>
+<link href="~/css/signin.css" rel="stylesheet" />
 <form class="blogform-signin" asp-controller="Auth" asp-action="Login" method="post">
    
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>

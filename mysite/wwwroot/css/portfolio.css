@@ -185,7 +185,16 @@ h4.title {
         background-color: #28bea8;
         color: #fff;
     }
+/*Responsive Area*/
+@media (min-width: 768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
 
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
 
 @media (min-width: 458px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -200,3 +209,5 @@ h4.title {
         font: normal 200 18px/10px;
     }
 }
+
+

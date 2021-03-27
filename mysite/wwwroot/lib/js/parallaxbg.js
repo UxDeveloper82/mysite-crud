@@ -8,7 +8,5 @@ $(document).ready(function () {
         $('.parallax--bg').css({
             'background-position': '0 -' + position + 'px'
         });
-
     });
-
 });
