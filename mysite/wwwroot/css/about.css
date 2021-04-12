@@ -6,6 +6,31 @@ body {
     padding: 0;
 }
 
+.btn-secondary {
+    background: transparent;
+    color: #172231;
+    padding-left: 0;
+    border: 0;
+}
+
+    .btn-secondary:active {
+        background: transparent !important;
+        color: #86c33a;
+    }
+
+    .btn-secondary:hover {
+        background: transparent;
+        color: #86c33a;
+    }
+
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .show > .btn-secondary.dropdown-toggle {
+        color: #86c33a;
+        background-color: transparent;
+        border: 0;
+    }
+
 .head {
     padding: 50px;
     background-image: url('./../../images/bg/abousUs-bg.jpg');
@@ -179,6 +204,45 @@ body {
     }
 
 }
+
+/* service */
+.service-wrapper {
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
+}
+
+.card-icon {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #86c33a;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 32px;
+    left: 15px;
+    top: -90px;
+}
+
+.service-bg-dots {
+    position: relative;
+}
+
+    .service-bg-dots::before {
+        position: absolute;
+        content: "";
+        background: url(../images/backgrounds/service-page-2.png);
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+    }
+
+/* /service */
 
     /*--[Card-me]--*/
     #cardin {

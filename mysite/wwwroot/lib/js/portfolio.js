@@ -94,7 +94,11 @@ $(document).ready(function () {
         $(this).find('.card-overlay').css({ 'top': '0' });
         $(this).find('.card-hover').css({ 'top': '100%' });
     });
-
 })
+loadPorts();
 
-
+const card = document.querySelector(".card");
+card.addEventListener('mouseenter', function (e) {
+    const itemEnter = e.target
+    console.log(itemEnter);
+});
